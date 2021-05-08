@@ -41,6 +41,25 @@ html {
   font-size: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+p {
+  font-size: 1.5rem;
+  
+}
+
+small {
+  font-size: 1.25rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1000px;
