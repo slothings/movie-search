@@ -47,7 +47,7 @@ This is a list of all the technologies used in the creation of this application!
 
 ### 5. Credits
 
-1. [Seth Martineau](https://github.com/slothings).
+[Seth Martineau](https://github.com/slothings)
 
 <a name = "challenges/learning" >
 
