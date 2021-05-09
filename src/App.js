@@ -25,22 +25,38 @@ const App = () => {
     }
   }
 
-  const nominateMovie = (movie) => {
-    const newNominateList = [...nominateList, movie];
-    setNominateList(newNominateList);
-  }
-
-  const removeMovie = (movie) => {
-    const newNominateList = nominateList.filter(
-      ((nominate) => nominate.imdbID !== movie.imdbID)
-    );
-    console.log(newNominateList);
-    setNominateList(newNominateList);
-  }
-
   useEffect(() => {
     searchMovie(searchValue);
   }, [searchValue]);
+
+  useEffect(() => {
+    const movieNominations = JSON.parse(
+      localStorage.getItem("Movie Nominations")
+    );
+
+    setNominateList(movieNominations);
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem("Movie Nominations", JSON.stringify(items))
+  }
+
+  const nominateMovie = (movie) => {
+    const newMovieList = [...nominateList, movie]
+    newMovieList.filter(
+      (nominate) => nominate.imdbID !== movie.imdbID
+    );
+    setNominateList(newMovieList);
+    saveToLocalStorage(newMovieList);
+  }
+
+  const removeMovie = (movie) => {
+    const newMovieList = nominateList.filter(
+      (nominate) => nominate.imdbID !== movie.imdbID
+    );
+    setNominateList(newMovieList);
+    saveToLocalStorage(newMovieList);
+  }
 
   return (
     <div className="container-fluid movie-app">
@@ -50,9 +66,9 @@ const App = () => {
       </div>
       <div className='row'>
         <SearchList
-          actionText="Nominate"
           movieList={movies}
           handleNominateClick={nominateMovie}
+          actionText="Nominate"
         />
       </div>
       <div className="row d-flex align-items-center mt-4 mb-4">
@@ -60,9 +76,9 @@ const App = () => {
       </div>
       <div className="row">
         <SearchList
-          actionText="Remove"
           movieList={nominateList}
           handleNominateClick={removeMovie}
+          actionText="Remove"
         />
       </div>
     </div>
