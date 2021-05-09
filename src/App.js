@@ -43,10 +43,12 @@ const App = () => {
 
   const nominateMovie = (movie) => {
     const newMovieList = [...nominateList, movie]
-    newMovieList.filter(
+    const updatedMovieList = movies.filter(
       (nominate) => nominate.imdbID !== movie.imdbID
-    );
+    )
+    console.log("MOVIE LIST" + updatedMovieList);
     setNominateList(newMovieList);
+    setMovies(updatedMovieList);
     saveToLocalStorage(newMovieList);
   }
 
@@ -55,6 +57,7 @@ const App = () => {
       (nominate) => nominate.imdbID !== movie.imdbID
     );
     setNominateList(newMovieList);
+    setMovies([...movies, movie]);
     saveToLocalStorage(newMovieList);
   }
 
