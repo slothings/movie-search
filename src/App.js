@@ -57,24 +57,24 @@ const App = () => {
       (nominate) => nominate.imdbID !== movie.imdbID
     );
     setNominateList(newMovieList);
-    setMovies([...movies, movie]);
+    // setMovies([...movies, movie]);
     saveToLocalStorage(newMovieList);
   }
 
   return (
     <div className="container-fluid movie-app">
-      <div className='row d-flex align-items-center mt-4 mb-4'>
-        <Header heading='Movies' />
+      <div className="d-flex justify-content-start m-1">
+        <Header heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-      <div className='row'>
+      <div className="row">
         <SearchList
           movieList={movies}
           handleNominateClick={nominateMovie}
           actionText="Nominate"
         />
       </div>
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="d-flex justify-content-start m-1">
         <Header heading="Nominate List" />
       </div>
       <div className="row">
