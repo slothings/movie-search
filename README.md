@@ -41,7 +41,7 @@ This is a list of all the technologies used in the creation of this application!
 
 ### 4. Screenshots
 
-![Movie Search](client/src/components/assets/readme1.JPG)
+![Movie Search](client/src/screenShot.JPG)
 
 <a name = "credits"></a>
 
@@ -61,7 +61,7 @@ Some challenges I faced while working on this application was getting familiar w
 
 MIT License
 
-Copyright (c) 2020 Seth Martineau
+Copyright (c) 2021 Seth Martineau
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

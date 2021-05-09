@@ -22,43 +22,37 @@ const App = () => {
 
     if (data.Search) {
       setMovies(data.Search);
-    }
-  }
+    };
+  };
 
   useEffect(() => {
     searchMovie(searchValue);
   }, [searchValue]);
 
-  useEffect(() => {
-    const movieNominations = JSON.parse(
-      localStorage.getItem("Movie Nominations")
-    );
+  // useEffect(() => {
+  //   const movieNominations = JSON.parse(localStorage.getItem("Movie Nominations"));
 
-    setNominateList(movieNominations);
-  }, []);
+  //   setNominateList(movieNominations);
+  // }, []);
 
-  const saveToLocalStorage = (items) => {
-    localStorage.setItem("Movie Nominations", JSON.stringify(items))
-  }
+  // const saveToLocalStorage = (items) => {
+  //   localStorage.setItem("Movie Nominations", JSON.stringify(items));
+  // };
 
   const nominateMovie = (movie) => {
     const newMovieList = [...nominateList, movie]
-    const updatedMovieList = movies.filter(
-      (nominate) => nominate.imdbID !== movie.imdbID
-    )
+    const updatedMovieList = movies.filter((nominate) => nominate.imdbID !== movie.imdbID);
     // console.log("MOVIE LIST" + updatedMovieList);
     setNominateList(newMovieList);
     setMovies(updatedMovieList);
-    saveToLocalStorage(newMovieList);
-  }
+    // saveToLocalStorage(newMovieList);
+  };
 
   const removeMovie = (movie) => {
-    const newMovieList = nominateList.filter(
-      (nominate) => nominate.imdbID !== movie.imdbID
-    );
+    const newMovieList = nominateList.filter((nominate) => nominate.imdbID !== movie.imdbID);
     setNominateList(newMovieList);
     // setMovies([...movies, movie]);
-    saveToLocalStorage(newMovieList);
+    // saveToLocalStorage(newMovieList);
   }
 
   return (

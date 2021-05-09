@@ -17,7 +17,7 @@ const SearchList = (props) => {
         </div>
       ))}
     </>
-  )
-}
+  );
+};
 
 export default SearchList;
