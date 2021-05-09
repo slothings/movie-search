@@ -46,7 +46,7 @@ const App = () => {
     const updatedMovieList = movies.filter(
       (nominate) => nominate.imdbID !== movie.imdbID
     )
-    console.log("MOVIE LIST" + updatedMovieList);
+    // console.log("MOVIE LIST" + updatedMovieList);
     setNominateList(newMovieList);
     setMovies(updatedMovieList);
     saveToLocalStorage(newMovieList);
@@ -62,27 +62,41 @@ const App = () => {
   }
 
   return (
-    <div className="container-fluid movie-app">
-      <div className="d-flex justify-content-start m-1">
-        <Header heading="Movies" />
+    <div className="container-fluid">
+      <div className="m-3 text-center">
+        <Header heading="Movie Search" />
+      </div>
+      <div className="searchBar mb-5">
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
-        <SearchList
-          movieList={movies}
-          handleNominateClick={nominateMovie}
-          actionText="Nominate"
-        />
-      </div>
-      <div className="d-flex justify-content-start m-1">
-        <Header heading="Nominate List" />
-      </div>
-      <div className="row">
-        <SearchList
-          movieList={nominateList}
-          handleNominateClick={removeMovie}
-          actionText="Remove"
-        />
+        <div className="col text-center">
+          <div>
+            <Header heading="Movies" />
+            <div>
+              <SearchList
+                movieList={movies}
+                handleNominateClick={nominateMovie}
+                actionText="Nominate"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="col">
+
+        </div>
+        <div className="col text-center">
+          <div>
+            <Header heading="Nominated" />
+            <div>
+              <SearchList
+                movieList={nominateList}
+                handleNominateClick={removeMovie}
+                actionText="Remove"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ body {
   background: white;
 }
 
-.movie-app > .col {
-  overflow-x: auto;
-  flex-wrap: nowrap;
+.searchBar {
+  display: flex;
+  justify-content: center;
 }
