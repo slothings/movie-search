@@ -18,7 +18,7 @@ const App = () => {
     const res = await fetch(url);
     const data = await res.json();
     // console.log("Data" + data.Search);
-    console.log(data.Search);
+    // console.log(data.Search);
 
     if (data.Search) {
       setMovies(data.Search);
