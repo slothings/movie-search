@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Movie Search
+![GitHub top language](https://img.shields.io/github/languages/top/slothings/movie-search)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [ Project Links ](#links)
+2. [ Description ](#description)
+3. [ Technologies ](#technologies)
+4. [ Screenshots ](#screenshots)
+5. [ Credits ](#credits)
+6. [ Challenges and Learning ](#challenges/learning)
+7. [ License ](#license)
 
-In the project directory, you can run:
+<a name = "links"></a>
 
-### `yarn start`
+### 1. Project Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Deployed Site
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The deployed site is hosted on [Github](https://slothings.github.io/movie-search/).
 
-### `yarn test`
+#### Git Hub Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The code can be viewed on my [GitHub Repository](https://github.com/slothings/movie-search).
 
-### `yarn build`
+<a name = "description"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is a movie search application I built using React. The search will display the top 10 results of your typed keyword. You can then nominate or remove movies by clicking on said buttons.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a name = "technologies" ></a>
 
-### `yarn eject`
+### 3. Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a list of all the technologies used in the creation of this application!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Bootstrap](https://getbootstrap.com/) was used to style this application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a name = "screenshots"></a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 4. Screenshots
 
-## Learn More
+![Movie Search](client/src/components/assets/readme1.JPG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a name = "credits"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. Credits
 
-### Code Splitting
+1. [Seth Martineau](https://github.com/slothings).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a name = "challenges/learning" >
 
-### Analyzing the Bundle Size
+### 6. Challenges and Learning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Some challenges I faced while working on this application was getting familiar with useState in React. In my Bootcamp we learned this near the end and only got to use it in my final project so I was kinda rusty looking back into it. Another difficulty I encountered with the project was getting the search list and nominated list to remove the movie when the remove button was clicked. The logic wasn't so obvious to me so I had to spend some time to figure out how to target and translate that into functioning code. Lastly, dealing with the styling of the application is always a bit more difficult than I always want. It ended up being good practice and I really got to learn my rows and columns again.
 
-### Making a Progressive Web App
+<a name = "license" ></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 7. Licenses
 
-### Advanced Configuration
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Copyright (c) 2020 Seth Martineau
 
-### Deployment
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
