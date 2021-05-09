@@ -41,7 +41,7 @@ This is a list of all the technologies used in the creation of this application!
 
 ### 4. Screenshots
 
-![Movie Search](client/src/screenShot.JPG)
+![Movie Search](src/screenShot.JPG)
 
 <a name = "credits"></a>
 
