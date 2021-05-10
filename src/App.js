@@ -60,6 +60,7 @@ const App = () => {
     <>
       <div className="container-fluid">
         <div className="m-3 text-center">
+          {nominateList.length === 5 && <Banner title="You've Nominated 5 Movies!" />}
           <Header heading="Movie Search" />
         </div>
         <div className="searchBar mb-5">
@@ -90,12 +91,6 @@ const App = () => {
                   handleNominateClick={removeMovie}
                   actionText="Remove"
                 />
-                <div>
-                  {nominateList.length === 5 &&
-                    <Banner
-                      title="You've Nominated 5 Movies!"
-                    />}
-                </div>
               </div>
             </div>
           </div>
