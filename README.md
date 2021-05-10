@@ -53,7 +53,7 @@ This is a list of all the technologies used in the creation of this application!
 
 ### 6. Challenges and Learning
 
-Some challenges I faced while working on this application was getting familiar with useState in React. In my Bootcamp we learned this near the end and only got to use it in my final project so I was kinda rusty looking back into it. Another difficulty I encountered with the project was getting the search list and nominated list to remove the movie when the remove button was clicked. The logic wasn't so obvious to me so I had to spend some time to figure out how to target and translate that into functioning code. Lastly, dealing with the styling of the application is always a bit more difficult than I always want. It ended up being good practice and I really got to learn my rows and columns again.
+Some challenges I faced while working on this application was getting familiar with state and useState in React. We learned this near the end of Bootcamp and only got to use it in our final projects, so I was not familiar with it at all. Another difficulty I encountered was getting the nominated list to remove a movie when the remove button was clicked. The logic wasn't so obvious to me, so I had to spend some time figuring out how to target and translate that into functioning code. Lastly, dealing with the styling is always a bit more tricky than I expect. It ended up being good practice and I really got to learn my rows and columns.
 
 <a name = "license" ></a>
 
