@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchList = (props) => {
+  
   const { movieList, handleNominateClick, actionText } = props;
   // console.log("SearchList" + movieList);
   return (

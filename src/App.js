@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchList from "./components/SearchList/SearchList.jsx";
 import SearchBox from "./components/SearchBox/SearchBox.jsx";
 import Header from "./components/Header/Header.jsx";
+import Banner from "react-js-banner";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -56,43 +57,51 @@ const App = () => {
   }
 
   return (
-    <div className="container-fluid">
-      <div className="m-3 text-center">
-        <Header heading="Movie Search" />
-      </div>
-      <div className="searchBar mb-5">
-        <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-      </div>
-      <div className="row">
-        <div className="col text-center">
-          <div>
-            <Header heading="Movies" />
+    <>
+      <div className="container-fluid">
+        <div className="m-3 text-center">
+          <Header heading="Movie Search" />
+        </div>
+        <div className="searchBar mb-5">
+          <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+        </div>
+        <div className="row">
+          <div className="col text-center">
             <div>
-              <SearchList
-                movieList={movies}
-                handleNominateClick={nominateMovie}
-                actionText="Nominate"
-              />
+              <Header heading="Movies" />
+              <div>
+                <SearchList
+                  movieList={movies}
+                  handleNominateClick={nominateMovie}
+                  actionText="Nominate"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col">
+          <div className="col">
 
-        </div>
-        <div className="col text-center">
-          <div>
-            <Header heading="Nominated" />
+          </div>
+          <div className="col text-center">
             <div>
-              <SearchList
-                movieList={nominateList}
-                handleNominateClick={removeMovie}
-                actionText="Remove"
-              />
+              <Header heading="Nominated" />
+              <div>
+                <SearchList
+                  movieList={nominateList}
+                  handleNominateClick={removeMovie}
+                  actionText="Remove"
+                />
+                <div>
+                  {nominateList.length === 5 &&
+                    <Banner
+                      title="You've Nominated 5 Movies!"
+                    />}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
