@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
 
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const [nominateList, setNominateList] = useState([]);
 
   const searchMovie = async (searchValue) => {
